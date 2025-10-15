@@ -1,6 +1,6 @@
 import webbrowser, requests, sys, os
 
-tokenbot = os.getenv('secret')
+tokenbot = os.getenv('kya')
 channel = -1002162858751 
  
 
