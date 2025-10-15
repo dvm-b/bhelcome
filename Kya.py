@@ -1,6 +1,6 @@
 import webbrowser, time, requests, sys, os
 
-tokenbot = os.getenv('kya')
+tokenbot = "7768613787:AAGXHqCRNK9Ze2FuVAXn-qCW2Obh1Pt7mFU"
 channel = "@unsely" 
 time.sleep(1) 
 
