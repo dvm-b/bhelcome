@@ -11,5 +11,5 @@ if not (response.get("ok") and response.get("result", {}).get("status") in ["mem
     anim(f""" ㅤ{black}ㅤ\033[101m[ 🚨 ]    𝐉𝚘𝚒𝚗 𝐀𝚕𝚕 𝐂𝚑𝚊𝚗𝚗𝚎𝚕𝚜 𝐓𝚑𝚎𝚗 𝐎𝚗𝚕𝚢 𝐘𝚘𝚞 𝐂𝚊𝚗 𝐏𝚛𝚘𝚌𝚎𝚎𝚍.{reset}""")
     webbrowser.open("https://t.me/addlist/-zdOU4i16nNjZjll")
 except Exception as e :
-    print(f"{e})
+    print(f"{e}")
     sys.exit()
