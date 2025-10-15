@@ -1,6 +1,6 @@
 import webbrowser, requests, sys, os
 
-tokenbot = "7391593372:AAFhLbgDhxgNmMZwlLIzB1VuxNnxykV83XQ"
+tokenbot = os.getenv('kya')
 channel = -1002162858751 
  
 
