@@ -1,7 +1,7 @@
 import webbrowser, time, requests, sys, os
 
 tokenbot = "7768613787:AAGXHqCRNK9Ze2FuVAXn-qCW2Obh1Pt7mFU"
-channel = "@unsely" 
+channel = -1002162858751 
  
 
 url = f"https://api.telegram.org/bot{tokenbot}/getChatMember?chat_id={channel}&user_id={teleid}"
