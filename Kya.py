@@ -1,14 +1,23 @@
-import webbrowser, requests, sys, os
+import requests
+import os
 
-tokenbot = os.environ.get("TELEGRAM_BOT_TOKEN")
-channel = -1002162858751 
- 
+bot_token = os.getenv('BOT_TOKEN')
+if not bot_token:
+    bot_token = input("Enter your bot token: ")
 
-dvmb = f"https://api.telegram.org/bot{tokenbot}/getChatMember?chat_id={channel}&user_id={teleid}"
-response = requests.get(dvmb).json()
+user_id = input("Enter user ID: ")
+channels = -1002162858751
+url = "https://py-today-member-checker.vercel.app/"
 
-if not (response.get("ok") and response.get("result", {}).get("status") in ["member", "administrator", "creator"]):
-    anim(f""" ㅤ{black}ㅤ\033[101m[ 🚨 ]    𝐉𝚘𝚒𝚗 𝐀𝚕𝚕 𝐂𝚑𝚊𝚗𝚗𝚎𝚕𝚜 𝐓𝚑𝚎𝚗 𝐎𝚗𝚕𝚢 𝐘𝚘𝚞 𝐂𝚊𝚗 𝐏𝚛𝚘𝚌𝚎𝚎𝚍.{reset}""")
-    webbrowser.open("https://t.me/addlist/-zdOU4i16nNjZjll")
-    
-    sys.exit()
+params = {
+    'token': bot_token,
+    'channel': channels,
+    'userid': user_id
+}
+
+response = requests.get(url, params=params)
+
+if response.status_code == 200:
+    print("Response:", response.json())
+else:
+    print("Error:", response.text)
